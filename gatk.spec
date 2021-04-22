@@ -24,9 +24,9 @@ projects of any size.
 %build
 mkdir -vp %{buildroot}%{_bindir}/
 %{__cp} -a %{_builddir}/*  %{buildroot}%{_bindir}/
+%{__cp} -s %{buildroot}%{_bindir}/%{name}-%{version}/gatk %{buildroot}%{_bindir}/
 
-%install
-%{_bindir}/ln gatk %{buildroot}%{_bindir}/%{name}-%{version}/gatk
+
 
 %files
 %{_bindir}/
